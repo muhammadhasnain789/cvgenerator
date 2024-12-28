@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced CV Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CV Maker</h1>
+        <input type="text" id="Name" placeholder="Enter Your Name" required> <br>
+        <input type="text" id="fathername" placeholder="Enter Your Father Name" required> <br>
+        <input type="text" id="skills" placeholder="Skills" required> <br>
+        <input type="email" id="email" placeholder="Email" required> <br>
+        <input type="number" id="number" placeholder="Phone Number" required> <br>
+        <button onclick="button()"><span>Submit</span></button>  
+    </div>
+    <div class="result-container">
+        <h2>CV Preview</h2>
+        <div class="cv-card">
+            <p id="name"></p>
+            <p id="fname"></p>
+            <p id="skill"></p>
+            <p id="email"></p>
+            <p id="numbe"></p>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #802240, #2d073a);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: 200% 200%;
+    animation: gradientAnimation 9s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.container {
+    background-color: rgb(222, 202, 163);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 20px #f8f7f7;
+}
+
+h1 {
+    font-size: 50px;
+    color: purple;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+h1:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    text-decoration: underline 1px solid black;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    font-family: italic;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid brown;
+}
+
+.result-container {
+    background-color: rgb(222, 202, 163);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 520px;
+    margin-top: -12px;
+    text-align: left;
+}
+
+.result-container h2 {
+    font-size: 28px;
+    color: purple;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.result-container h2:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    text-decoration: underline 1px solid black;
+}
+.result-container:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 20px #f8f7f7;
+}
+
+.result-container p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Button Styling */
+button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: black;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    width: 180px;
+    margin: 0 auto;
+}
+
+button:after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: #753a88;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    right: 0;
+}
+
+button:hover::after {
+    right: auto;
+    left: 0;
+    width: 100%;
+}
+
+button span {
+    text-align: center;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+    color: #fff;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container, .result-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+
+    button {
+        width: 150px;
+    }
+
+    button span {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container, .result-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        width: 120px;
+    }
+
+    button span {
+        font-size: 0.9em;
+        padding: 12px 20px;
+    }
+}
